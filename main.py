@@ -1,35 +1,35 @@
-from funcoes import menu_validado, posicao_atual, go_up, go_down, go_left, go_right,pokedex, chance_capture, creat_pokemon, erase_resist
+from funcoes import movi_posi, verif_e_poke
 
 print('Entrando')
-posicao_atual()
+movi_posi.posicao_atual()
 
 while True:
-    opcao_menu = menu_validado()
+    opcao_menu = verif_e_poke.menu_validado()
 
     match opcao_menu:
         case 9:
-            posicao_atual()
-            opcao_menu = menu_validado()
+            movi_posi.posicao_atual()
+            opcao_menu = verif_e_poke.menu_validado()
 
         case 8:
-            go_up()
-            posicao_atual()
+            movi_posi.go_up()
+            movi_posi.posicao_atual()
 
         case 2:
-            go_down()
-            posicao_atual()
+            movi_posi.go_down()
+            movi_posi.posicao_atual()
 
         case 4:
-            go_left()
-            posicao_atual()
+            movi_posi.go_left()
+            movi_posi.posicao_atual()
 
         case 6:
-            go_right()
-            posicao_atual()
+            movi_posi.go_right()
+            movi_posi.posicao_atual()
 
         case 5:
-            pokedex()
-            posicao_atual()
+            verif_e_poke.pokedex()
+            movi_posi.posicao_atual()
 
         case 0:
             print('Fim de jogo')
